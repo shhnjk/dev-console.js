@@ -1,2 +1,7 @@
 # dev-console.js
-Add Devtools console to your webpage
+Maybe you want a console in webpage or iframe? Just add them :)
+
+## How to use:
+```
+<script src="dev-console.js"></script>
+```
