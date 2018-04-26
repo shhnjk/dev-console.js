@@ -11,23 +11,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   function run(){
     var script = cmd.value;
-    if(script == ""){
+    if(script === ""){
       return;
     }
     arr.push(script);
     result.innerHTML += "\n> " + script;
     try{
       var cb = eval(script);
-      if(cb == undefined){
+      if(cb === undefined){
         cb = "undefined";
-      }else if(cb == ""){
+      }else if(cb === ""){
           cb = '""';
       }
       result.innerHTML += "\n< " + cb;
       cmd.value = "";
     }catch(e){
       result.innerHTML += "\n< " + e;
-      cmd.value = ""
+      cmd.value = "";
     }
     result.scrollTop = 99999;
     ptr = 0;
@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
           run();
         }
       }else if(key === 38){
-        if(arr.length != 0){
-          if(ptr == 0){
+        if(arr.length !== 0){
+          if(ptr === 0){
             ptr = arr.length - 1;
             cmd.value = arr[ptr];
           }else{
